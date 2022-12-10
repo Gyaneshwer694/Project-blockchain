@@ -32,17 +32,3 @@ module.exports = router
 
 
 
-const createbook = async function(req,res){
-    try{
-        let data = req.body 
-        let {name, password,mob, userId} = data
-        if(!name){
-            res.status(400).send({status : false, Msg : "name not found"}) 
-        }
-        if(!password){
-            res.status(400).send({status : false, Msg : "name not found"}) 
-        }if(!mob){
-            res.status(400).send({status : false, Msg : "name not found"}) 
-        
-    let result = await bookmodel.create(data)
-}
